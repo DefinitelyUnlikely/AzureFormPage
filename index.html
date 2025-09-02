@@ -6,36 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register your visit</title>
 
-    <link rel="stylesheet" href="scripts.js">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- using mona sans font as per https://www.w3schools.com/howto/tryit.asp?font=Mona%20Sans instructions 
+     to make the static GitHub page "match" GitHub a bit more. -->
+    <link href='https://fonts.googleapis.com/css?family=Mona Sans' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Mona Sans';
+            font-size: 22px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Welcome</h1>
+    <h1 class="welcome">Welcome</h1>
     <h2>Please register your visit</h2>
 
-    <form action="POST">
-        <div class="email-input">
-            <label for="email-input">Email</label>
-            <input type="email" name="email-input">
-        </div>
+    <div class="form-div">
+        <form action="POST">
+            <div class="input-div email-input">
+                <label for="email-input" class="input-label">Email</label>
+                <input type="email" name="email-input" class="input-box">
+            </div>
 
-        <div class="name-input">
-            <label for="name-input">Name</label>
-            <input type="text" name="name-input">
-        </div>
+            <div class="input-div name-input">
+                <label for="name-input" class="input-label">Name</label>
+                <input type="text" name="name-input" class="input-box">
+            </div>
 
-        <div class="reason-input">
-            <label for="reason-input">Reason</label>
-            <select name="reason-input" id="reason-input">
-                <option value=Meeting">Meeting</option>
-                <option value="Interview">Interview</option>
-                <option value="Personal">Personal Visit</option>
-                <option value="Other">Other</option>
-            </select>
-        </div>
-        <input type="submit">
-    </form>
+            <div class="input-div reason-input">
+                <label for="reason-input" class="input-label">Reason</label>
+                <select name="reason-input" id="reason-input">
+                    <option value=Meeting">Meeting</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Personal">Personal Visit</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <input class="submit-button" type="submit">
+        </form>
+    </div>
 
 </body>
 
