@@ -14,6 +14,9 @@ async function submitForm(event) {
 
     const response = await fetch(url, {
         method: "POST",
+        headers: {
+            'Content-type': 'application/json'
+        },
         body: JSON.stringify({
             email: email,
             name: name,
