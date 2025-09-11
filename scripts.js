@@ -1,0 +1,1 @@
+// https://visitregistration-a9btgsd0ephsbade.swedencentral-01.azurewebsites.net/api/httpformtrigger
