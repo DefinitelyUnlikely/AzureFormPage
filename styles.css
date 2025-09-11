@@ -7,6 +7,8 @@ body {
     height: 98vh;
     background-color: #24292e;
     color: #ffffff;
+    font-family: 'Mona Sans';
+    font-size: 22px;
 }
 
 .form-div form {
