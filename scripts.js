@@ -6,6 +6,7 @@ form.addEventListener("submit", submitForm);
 async function submitForm(event) {
     event.preventDefault();
 
+    let text = document.getElementsByClassName("info-message")[0];
     const url = "https://visitregistration-a9btgsd0ephsbade.swedencentral-01.azurewebsites.net/api/httpformtrigger"
 
     var email = document.getElementById("email-input").value;
@@ -26,8 +27,8 @@ async function submitForm(event) {
 
     if (!response.ok) {
         text.innerText = "Please try again."
+        return;
     }
 
-    let text = document.getElementsByClassName("info-message")[0];
     text.innerText = "Your visit has been registrated"
 }
