@@ -26,8 +26,8 @@ async function submitForm(event) {
     });
 
     if (!response.ok) {
-        text.innerText = "Please try again."
         let json = await response.text();
+        text.innerText = json;
         console.log(json);
         return;
     }
